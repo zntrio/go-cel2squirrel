@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        go-version: ['1.23.x', '1.24.x']
+        go-version: ['1.23.x', '1.24.x', '1.25.x']
     
     steps:
     - name: Checkout code
@@ -48,7 +48,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
       with:
-        go-version: '1.24.x'
+        go-version: '1.25.x'
         cache: true
 
     - name: golangci-lint
@@ -68,7 +68,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
       with:
-        go-version: '1.24.x'
+        go-version: '1.25.x'
         cache: true
 
     - name: Build
@@ -85,7 +85,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
       with:
-        go-version: '1.24.x'
+        go-version: '1.25.x'
         cache: true
 
     - name: Run fuzz tests (short)
